@@ -12,3 +12,8 @@ Try using irram.sh https://github.com/park-sewon/irram.sh.git which is a version
 
 ### Development plan
 
+1. Randomly generated orthogonal matrix from Haar measure.
+
+2. Complex number from gaussian real and imaginary parts.
+
+3. random hermitian and unitary matrices.

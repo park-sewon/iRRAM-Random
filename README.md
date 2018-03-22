@@ -1,9 +1,28 @@
 # iRRAM-Random
 This is a work-in-progress repository which provides a module for randomly generated real numbers, complex numbers, matrices in iRRAM.
 
-### How to use
+## How to use
+You first need to be comfortable working with iRRAM. For this, see iRRAM's documentation and example codes ()
 
-### Examples
+For now, before making this repository into a proper library, you can use random numbers by adding the source codes into your project. Random object generatros in each header file is explained below:
+
+### random-real.h
+
+REAL gaussian() returns a normally distributed real number
+
+REAL uniform() returns uniformlly distributed real number in (0,1)
+
+### random-complex.h
+
+### random-matrix.h
+
+REALMATRIX gaussian_orthogonal_ensemble(unsigned int n) returns a n time n random matrix where each entry is normally distributed.
+
+## Examples
+
+### 1. Random Matrix Theory
+
+## Notes
 
 ### Version compatibility
 Current iRRAM-Random works with in-development version of iRRAM https://github.com/fbrausse/iRRAM.git commit# 3ea239a720d (Jan. 2017).

@@ -7,8 +7,11 @@ iRRAM is a open source C++ library for real number computation (Exact Real Arith
 For the sake of advertising iRRAM, below is what iRRAM can do:
 
 >REAL x = pi();
+
 >cout << setRwidth(100);
+
 >cout << x;
+
 >> +.31415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253E+0001
 
 ## How to use

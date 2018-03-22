@@ -1,8 +1,18 @@
 # iRRAM-Random
 This is a work-in-progress repository which provides a module for randomly generated real numbers, complex numbers, matrices in iRRAM.
 
+## iRRAM
+iRRAM is a open source C++ library for real number computation (Exact Real Arithmetic). It is developed in University of Trier. For more information, see http://irram.uni-trier.de
+
+For the sake of advertising iRRAM, below is what iRRAM can do:
+
+REAL x = pi();
+cout << setRwidth(100);
+cout << x;
+>> +.31415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253E+0001
+
 ## How to use
-You first need to be comfortable working with iRRAM. For this, see iRRAM's documentation and example codes ()
+You first need to be comfortable working with iRRAM. For this, see iRRAM's documentation and example codes.
 
 For now, before making this repository into a proper library, you can use random numbers by adding the source codes into your project. Random object generatros in each header file is explained below:
 

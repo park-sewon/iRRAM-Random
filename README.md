@@ -39,7 +39,7 @@ For now, before making this repository into a proper library, you can use random
 
 * ___COMPLEX uniform_complex(COMPLEX c, REAL r)___ returns a uniformly distributed complex number in a disc centered at c with radius r
 
-* ___ COMPLEX gaussian_complex()___ returns a normally distributed complex number
+* ___COMPLEX gaussian_complex()___ returns a normally distributed complex number
 
 ### random-matrix.h
 

@@ -3,6 +3,8 @@
 #include "iRRAM.h"
 
 #include "include/random-real.h"
+#include "include/random-complex.h"
+
 using namespace iRRAM;
 
 // plot empirical distribution of R[] in (a,b) with
@@ -52,5 +54,8 @@ void compute()
     rand[i] = linear_real();
   plot_random_variables(rand,0,1, res,10*res, N);
 
+  COMPLEX X = uniform_complex();
+  cout << real(X) <<", " << imag(X);
+  
 }
 

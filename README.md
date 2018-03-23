@@ -76,6 +76,10 @@ After having the uniformly distributed random number generator, it is used to ma
 
 ### Development plan
 
-1.  Complex number from gaussian real and imaginary parts.
+1. Datatypes for complex matrices 
 
-1.  random hermitian and unitary matrices.
+1. random hermitian and unitary matrices.
+
+1. Add examples for random matrices
+
+1. More useful random objects...

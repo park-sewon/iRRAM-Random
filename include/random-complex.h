@@ -16,5 +16,9 @@ This header file is for providing random complex number generators
 
 using namespace iRRAM;
 
+COMPLEX uniform_complex();
+COMPLEX uniform_complex(COMPLEX, REAL);
+COMPLEX gaussian_complex();
+
 
 #endif

@@ -35,6 +35,12 @@ For now, before making this repository into a proper library, you can use random
 
 ### random-complex.h
 
+* ___COMPLEX uniform_complex()___ returns a uniformly distributed complex number in a unit disc
+
+* ___COMPLEX uniform_complex(COMPLEX c, REAL r)___ returns a uniformly distributed complex number in a disc centered at c with radius r
+
+* ___ COMPLEX gaussian_complex()___ returns a normally distributed complex number
+
 ### random-matrix.h
 
 * ___REALMATRIX gaussian_symmetric_matrix(unsigned int n)___ returns a $n \times n$ random symmetric matrix where each entry is normally distributed.

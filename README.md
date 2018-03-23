@@ -1,22 +1,3 @@
-<style TYPE="text/css">
-code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
-</style>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
-    }
-});
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i = 0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-});
-</script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
 # iRRAM-Random
 This is a work-in-progress repository which provides a module for randomly generated real numbers, complex numbers, matrices in iRRAM.
 
@@ -42,21 +23,21 @@ For now, before making this repository into a proper library, you can use random
 
 ### random-real.h
 
-* ___***REAL gaussian_real()***___ returns a normally distributed real number
+* ___REAL gaussian_real()___ returns a normally distributed real number
 
-* ___***REAL uniform_real()***___ returns uniformlly distributed real number in (0,1)
+* ___REAL uniform_real()___ returns uniformlly distributed real number in (0,1)
 
 ### random-complex.h
 
 ### random-matrix.h
 
-* ___***REALMATRIX gaussian_symmetric_matrix(unsigned int n)***___ returns a $n \times n$ random symmetric matrix where each entry is normally distributed.
+* ___REALMATRIX gaussian_symmetric_matrix(unsigned int n)___ returns a $n \times n$ random symmetric matrix where each entry is normally distributed.
 
-* ___***REALMATRIX gaussian_asymmetric_matrix(unsigned int n)***___ returns a $n \times n$ random asymmetric matrix where each entry is normally distributed.
+* ___REALMATRIX gaussian_asymmetric_matrix(unsigned int n)___ returns a $n \times n$ random asymmetric matrix where each entry is normally distributed.
 
-* ___***REALMATRIX gaussian_matrix(unsigned int n)***___ returns a $n \times n$ random matrix where each entry is normally distributed.
+* ___REALMATRIX gaussian_matrix(unsigned int n)___ returns a $n \times n$ random matrix where each entry is normally distributed.
 
-* ___***REALMATRIX haar_orthogonal_matrix(unsigned int n)***___ returns a $n \times n$ random orthogonal matrix which follows Haar distribution in $O(n)$. See _[Stewart, Gilbert W. "The efficient generation of random orthogonal matrices with an application to condition estimators." SIAM Journal on Numerical Analysis 17.3 (1980): 403-409.]_ for more detail.
+* ___REALMATRIX haar_orthogonal_matrix(unsigned int n)___ returns a $n \times n$ random orthogonal matrix which follows Haar distribution in $O(n)$. See _[Stewart, Gilbert W. "The efficient generation of random orthogonal matrices with an application to condition estimators." SIAM Journal on Numerical Analysis 17.3 (1980): 403-409.]_ for more detail.
 
 
 ## Examples

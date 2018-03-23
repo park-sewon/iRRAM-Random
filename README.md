@@ -23,9 +23,15 @@ For now, before making this repository into a proper library, you can use random
 
 ### random-real.h
 
+* ___REAL uniform_real()___ returns uniformlly distributed real number in (0,1)
+
+* ___ REAL uniform_real(REAL a, REAL b)___ returns a uniformly distributed real number in (a, b)
+
 * ___REAL gaussian_real()___ returns a normally distributed real number
 
-* ___REAL uniform_real()___ returns uniformlly distributed real number in (0,1)
+* ___REAL gaussian_real(REAL e, REAL std)___ returns a normally distributed real number with average e and standard deviation std.
+
+* ___REAL linear_real()___ returns a random real number follows distribution p(x) = 2*x in (0,1)
 
 ### random-complex.h
 
@@ -41,6 +47,9 @@ For now, before making this repository into a proper library, you can use random
 
 
 ## Examples
+
+### 0. Plot!
+The file _plot.cc_ is a iRRAM source code which plots i.i.d random variables on a Terminal. The code is written intuitively. Try various distributions to plot! Have fun!
 
 ### 1. Random Matrix Theory
 

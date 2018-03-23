@@ -1,5 +1,9 @@
 /*
-the header file defines programs for (psuedo-)random real numbers following uniform distribution in [0,1] and gaussian normal:
+iRRAM-Random is a library providing randomly generated
+continuous objects in iRRAM.
+The library is MIT license protected.
+
+This header file is for providing random real number generators
 */
 #ifndef RANDOMREAL_H
 #define RANDOMREAL_H

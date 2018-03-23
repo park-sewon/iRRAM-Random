@@ -25,7 +25,7 @@ For now, before making this repository into a proper library, you can use random
 
 * ___REAL uniform_real()___ returns uniformlly distributed real number in (0,1)
 
-* ___ REAL uniform_real(REAL a, REAL b)___ returns a uniformly distributed real number in (a, b)
+* ___REAL uniform_real(REAL a, REAL b)___ returns a uniformly distributed real number in (a, b)
 
 * ___REAL gaussian_real()___ returns a normally distributed real number
 

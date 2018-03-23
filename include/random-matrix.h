@@ -11,7 +11,13 @@ the header file defines programs for (psuedo-)random real numbers following unif
 
 using namespace iRRAM;
 
-REALMATRIX gaussian_orthogonal_ensemble(unsigned int);
-REALMATRIX gaussian_assymetric(unsigned int );
-
+// returns a symmetric matrix whose entry follows normal distribution i.i.d.
+REALMATRIX gaussian_symmetric_matrix(unsigned int);
+// returns a assymetric matrix whose entry follows normal distribution i.i.d.
+REALMATRIX gaussian_asymmetric_matrix(unsigned int );
+// returns a square matrix which is regular almost surely whose entry follows normal distribution i.i.d.
+REALMATRIX gaussian_matrix(unsigned int );
+// returns a uniformly distributed orthogonal matrix (that follows Haar measure in O(n)).
+// This construction terminates almost surely.
+REALMATRIX haar_orthogonal_matrix(unsigned int );
 #endif

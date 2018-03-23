@@ -1,3 +1,22 @@
+<style TYPE="text/css">
+code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] // removed 'code' entry
+    }
+});
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 # iRRAM-Random
 This is a work-in-progress repository which provides a module for randomly generated real numbers, complex numbers, matrices in iRRAM.
 
@@ -31,7 +50,14 @@ For now, before making this repository into a proper library, you can use random
 
 ### random-matrix.h
 
-* ___***REALMATRIX gaussian_orthogonal_ensemble(unsigned int n***)___ returns a n time n random matrix where each entry is normally distributed.
+* ___***REALMATRIX gaussian_symmetric_matrix(unsigned int n)***___ returns a $n \times n$ random symmetric matrix where each entry is normally distributed.
+
+* ___***REALMATRIX gaussian_asymmetric_matrix(unsigned int n)***___ returns a $n \times n$ random asymmetric matrix where each entry is normally distributed.
+
+* ___***REALMATRIX gaussian_matrix(unsigned int n)***___ returns a $n \times n$ random matrix where each entry is normally distributed.
+
+* ___***REALMATRIX haar_orthogonal_matrix(unsigned int n)***___ returns a $n \times n$ random orthogonal matrix which follows Haar distribution in $O(n)$. See _[Stewart, Gilbert W. "The efficient generation of random orthogonal matrices with an application to condition estimators." SIAM Journal on Numerical Analysis 17.3 (1980): 403-409.]_ for more detail.
+
 
 ## Examples
 
@@ -45,7 +71,7 @@ Current iRRAM-Random works with in-development version of iRRAM https://github.c
 Try using irram.sh https://github.com/park-sewon/irram.sh.git which is a version controller of iRRAM if you need to work with various versions at once.
 
 ### How does it work
-The generator is based on C++ std library's random integer generator. Inductively thinking, at first  we create a random integer. For some precision p, if we have a integer $k$, then it means we have a real number [(k-1)/2^{p+1}, (k+1)/2^{p+1}]. If some higher precision p'>p is required, we simply append a random integer to the existing integer to make a real number with the required error bound. Consider a cylindrical set thingy in probabilistic theory.
+The generator is based on C++ std library's random integer generator. Inductively thinking, at first  we create a random integer. For some precision $p$, if we have a integer $k$, then it means we have a real number $[(k-1)/2^{p+1}, (k+1)/2^{p+1}]$. If some higher precision $p'>p$ is required, we simply append a random integer to the existing integer to make a real number with the required error bound. Consider a cylindrical set thingy in probabilistic theory.
 
 iRRAM's reiteration cache is used to make the random number consistent; existing integer should not be re-generated. Hence, to follow iRRAM's spirit of hiding reiteration, the part is hidden in random-core.cc file.
 
@@ -53,8 +79,6 @@ After having the uniformly distributed random number generator, it is used to ma
  
 
 ### Development plan
-
-1. Randomly generated orthogonal matrix from Haar measure.
 
 1.  Complex number from gaussian real and imaginary parts.
 

@@ -9,8 +9,11 @@ the header file defines programs for (psuedo-)random real numbers following unif
 #include "../include/random-core.h"
 using namespace iRRAM;
 
+REAL uniform_real();
+REAL uniform_real(REAL, REAL);
 
 REAL gaussian_real();
-REAL uniform_real();
+REAL gaussian_real(REAL, REAL);
 
+REAL linear_real();
 #endif

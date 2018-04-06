@@ -85,9 +85,12 @@ The file _plot.cc_ is a iRRAM source code which plots i.i.d random variables on 
 ## Notes
 
 ### Version compatibility
-Current iRRAM-Random works with in-development version of iRRAM https://github.com/fbrausse/iRRAM.git commit# 3ea239a720d (Jan. 2017).
+Source files in src_official is compatible with the iRRAM
+official release version of 201401.
 
-Try using irram.sh https://github.com/park-sewon/irram.sh.git which is a version controller of iRRAM if you need to work with various versions at once.
+Source files in src works with in-development version of iRRAM https://github.com/fbrausse/iRRAM.git commit# 3ea239a720d (Jan. 2017).
+
+Try using [irram.sh](https://github.com/park-sewon/irram.sh.git) which is a version and package controller of iRRAM if you need to work with various versions at once.
 
 ### How does it work
 The generator is based on C++ std library's random integer generator. Inductively thinking, at first  we create a random integer. For some precision $p$, if we have a integer $k$, then it means we have a real number $[(k-1)/2^{p+1}, (k+1)/2^{p+1}]$. If some higher precision $p'>p$ is required, we simply append a random integer to the existing integer to make a real number with the required error bound. Consider a cylindrical set thingy in probabilistic theory.

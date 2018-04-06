@@ -19,9 +19,32 @@ cout << x
 ## How to use
 You first need to be comfortable working with iRRAM. For this, see iRRAM's documentation and example codes.
 
-For now, before making this repository into a proper library, you can use random numbers by adding the source codes into your project. Random object generators in each header file is explained below:
+If you use [irramsh](https://github.com/park-sewon/irram.sh), 
+the package manager for iRRAM, 
+you can install this random package simply by
 
-### random-real.h
+```commandline
+$ irramsh install irram-random
+```
+then import irram-random to your project:
+
+yourproject.cc
+```C
+...
+#include "irram-random.h"
+...
+REALMATRIX O = haar_orthogonal_matrix(100);
+```
+Then compile it easily by 
+```C
+$ irramsh -o randommatrix.out yourjroject.cc
+```
+
+Random object generators in each header file is explained below.
+irram-random.h includes all these header file. Hence, if it is feasible, it is okay to include only the 
+irram-random.h:
+
+### real numbers:
 
 * ___REAL uniform_real()___ returns uniformlly distributed real number in (0,1)
 
@@ -33,7 +56,7 @@ For now, before making this repository into a proper library, you can use random
 
 * ___REAL linear_real()___ returns a random real number follows distribution p(x) = 2*x in (0,1)
 
-### random-complex.h
+### complex numbers:
 
 * ___COMPLEX uniform_complex()___ returns a uniformly distributed complex number in a unit disc
 
@@ -41,7 +64,7 @@ For now, before making this repository into a proper library, you can use random
 
 * ___COMPLEX gaussian_complex()___ returns a normally distributed complex number
 
-### random-matrix.h
+### matrices:
 
 * ___REALMATRIX gaussian_symmetric_matrix(unsigned int n)___ returns a $n \times n$ random symmetric matrix where each entry is normally distributed.
 

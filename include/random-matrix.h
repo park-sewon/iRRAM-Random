@@ -14,6 +14,7 @@ This header file is for providing random matrix generators
 #include "../include/random-real.h"
 
 using namespace iRRAM;
+namespace iRRAM_Random{
 
 // returns a symmetric matrix whose entry follows normal distribution i.i.d.
 REALMATRIX gaussian_symmetric_matrix(unsigned int);
@@ -24,4 +25,6 @@ REALMATRIX gaussian_matrix(unsigned int );
 // returns a uniformly distributed orthogonal matrix (that follows Haar measure in O(n)).
 // This construction terminates almost surely.
 REALMATRIX haar_orthogonal_matrix(unsigned int );
+
+}
 #endif

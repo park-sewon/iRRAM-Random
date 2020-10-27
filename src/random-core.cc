@@ -8,7 +8,7 @@
 
 using namespace iRRAM;
 
-
+namespace iRRAM_Random{
 INTEGER pow(int a, int b)
 {
   INTEGER result = 1;
@@ -20,7 +20,7 @@ INTEGER pow(int a, int b)
 
 REALRAND::REALRAND()
   {
-    int prec = state.ACTUAL_STACK.actual_prec;
+    int prec = ACTUAL_STACK.actual_prec;
 
     sizetype err;
     std::string r;
@@ -38,10 +38,10 @@ REALRAND::REALRAND()
     std::uniform_int_distribution<> dis(0, 65535);
 
 
-    if (state.ACTUAL_STACK.inlimit == 0)
+    if (ACTUAL_STACK.inlimit == 0)
     {
-      if(state.thread_data_address->cache_s.get(result_bits)
-        && state.thread_data_address->cache_i.get(result_size))
+      if(iRRAM_thread_data_address->cache_s.get(result_bits)
+        && iRRAM_thread_data_address->cache_i.get(result_size))
       {
         r = result_bits;
         s = result_size;
@@ -50,8 +50,8 @@ REALRAND::REALRAND()
       {
         result_bits = std::to_string(dis(gen));
         result_size = 16;
-        state.thread_data_address->cache_s.put(result_bits);
-        state.thread_data_address->cache_i.put(result_size);
+        iRRAM_thread_data_address->cache_s.put(result_bits);
+        iRRAM_thread_data_address->cache_i.put(result_size);
         r = result_bits;
         s = result_size;
       }
@@ -68,8 +68,8 @@ REALRAND::REALRAND()
     bits = swrite(result_integer);
     bitlength = needblock * 16;
 
-    state.thread_data_address->cache_s.modify(bits);
-    state.thread_data_address->cache_i.modify(bitlength);
+    iRRAM_thread_data_address->cache_s.modify(bits);
+    iRRAM_thread_data_address->cache_i.modify(bitlength);
 
 
     sizetype_set(err,1,-bitlength);
@@ -115,3 +115,4 @@ REAL REALRAND::asREAL()
   }
 
 
+}

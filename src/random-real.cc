@@ -1,6 +1,9 @@
 #include "../include/random-real.h"
 using namespace iRRAM;
+using namespace iRRAM_Random;
 
+
+namespace iRRAM_Random{
 REAL uniform_real()
 {
   return REALRAND().asREAL();
@@ -35,4 +38,4 @@ REAL linear_real()
 {
   return maximum(uniform_real(), uniform_real());
 }
-
+}

@@ -16,6 +16,7 @@ this file should not be accessed from user application.
 #include "iRRAM/core.h"
 
 using namespace iRRAM;
+namespace iRRAM_Random{
 
 class REALRAND
 {
@@ -29,5 +30,5 @@ class REALRAND
     ~REALRAND();
     REAL asREAL();
 };
-
+}
 #endif

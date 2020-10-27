@@ -12,7 +12,7 @@ This header file is for providing random real number generators
 #include "iRRAM/core.h"
 #include "../include/random-core.h"
 using namespace iRRAM;
-
+namespace iRRAM_Random{
 REAL uniform_real();
 REAL uniform_real(REAL, REAL);
 
@@ -20,4 +20,5 @@ REAL gaussian_real();
 REAL gaussian_real(REAL, REAL);
 
 REAL linear_real();
+}
 #endif

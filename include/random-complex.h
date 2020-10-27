@@ -15,10 +15,11 @@ This header file is for providing random complex number generators
 
 
 using namespace iRRAM;
+namespace iRRAM_Random{
 
 COMPLEX uniform_complex();
 COMPLEX uniform_complex(COMPLEX, REAL);
 COMPLEX gaussian_complex();
-
+}
 
 #endif

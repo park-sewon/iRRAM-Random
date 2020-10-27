@@ -3,6 +3,10 @@
 
 
 using namespace iRRAM;
+using namespace iRRAM_Random;
+
+
+namespace iRRAM_Random{
 
 COMPLEX uniform_complex()
 {
@@ -19,4 +23,5 @@ COMPLEX uniform_complex(COMPLEX c, REAL r)
 COMPLEX gaussian_complex()
 {
   return COMPLEX(gaussian_real(), gaussian_real());
+}
 }

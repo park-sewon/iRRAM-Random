@@ -2,7 +2,10 @@
 #include <utility>
 
 using namespace iRRAM;
+using namespace iRRAM_Random;
 
+
+namespace iRRAM_Random{
 
 REALMATRIX gaussian_symmetric_matrix(unsigned int n)
 {
@@ -133,4 +136,5 @@ REALMATRIX haar_orthogonal_matrix(unsigned int n)
       lambda(i,i) = -1;
 
   return T*lambda;
+}
 }
